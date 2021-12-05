@@ -24,6 +24,19 @@ def replace_str(text):
     return text
 
 
+def replace_str_to_use(text):
+    text = text.replace(',', ' ')
+    text = text.replace('to', ' ')
+    text = re.sub(r'[0-9]+', ' ', text)
+    text = text.replace('(', ' ')
+    text = text.replace(')', ' ')
+    text = text.replace(r'\t', ' ')
+    text = text.replace(r'\xa', ' ')
+    text = text.replace(r'\t\t\t\t\t\t\t', ' ')
+    text = ' '.join(text.split())
+    return text
+
+
 def fill_na_DESCRIPTION_TRANSLATED(df):
     df.loc[72195, 'DESCRIPTION_TRANSLATED'] = df.loc[72195, 'DESCRIPTION']
     return df

@@ -10,7 +10,7 @@ def replace_str(text):
     text = text.replace('<br/><br/>\n\na', ' ')
     text = text.replace('<br/><br/>', ' ')
     text = text.replace('-', ' ')
-    text = text.replace(r'\n', ' ') # TODO: 空白スペースに置き換える必要があるか確認
+    text = text.replace(r'\n', ' ')  # TODO: 空白スペースに置き換える必要があるか確認
     text = text.replace(r'\n\n', ' ')
     text = text.replace('*', ' ')
     text = text.replace('”', '')
